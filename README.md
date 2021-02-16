@@ -39,7 +39,12 @@ In order to install run those commands:
 3. terraform apply - applying the changes, and deploying it. 
 
 ### Deployment
-
+Deploys those components:
+* Configure new VPC and 6 subnets(3 Public and 3 Private)
+* Configure new SG for workers
+* Deploy new EKS-Cluster
+* Creates new node-group and add it to the cluster
+* Configure kubernetes provider and deploy registry deployment and NodePort service.
 
 ## Built With
 * Terraform - infrastructure as code software
