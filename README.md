@@ -18,7 +18,7 @@ chmod +x ./aws-iam-authenticator
 mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$PATH:$HOME/bin
 echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 ```
-Kubectl - In order to control K8S cluster
+Kubectl - In order to control K8S cluster.
 ```
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
@@ -34,16 +34,16 @@ yum install -y kubectl
 
 ### Installing
 In order to install run those commands:
-1. terraform init - Downloads all required modules
-2. terraform plan(optional) - Showing execution plan, showing everything that will create/change
+1. terraform init - Downloads all required modules.
+2. terraform plan(optional) - Showing execution plan, showing everything that will create/change.
 3. terraform apply - applying the changes, and deploying it. 
 
 ### Deployment
 Deploys those components:
-* Configure new VPC and 6 subnets(3 Public and 3 Private)
-* Configure new SG for workers
-* Deploy new EKS-Cluster
-* Creates new node-group and add it to the cluster
+* Configure new VPC and 6 subnets(3 Public and 3 Private).
+* Configure new SG for workers.
+* Deploy new EKS-Cluster.
+* Creates new node-group and add it to the cluster.
 * Configure kubernetes provider and deploy registry deployment and NodePort service.
 
 In order to start working with the cluster, you must run that command:
