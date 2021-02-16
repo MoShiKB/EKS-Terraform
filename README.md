@@ -33,7 +33,11 @@ yum install -y kubectl
 ```
 
 ### Installing
-In order to install run those commands:
+First step is to configure our aws cli, which is done by running:
+```
+aws configure
+```
+Then we can start and deploy our EKS on AWS, by doing those steps:
 1. terraform init - Downloads all required modules.
 2. terraform plan(optional) - Showing execution plan, showing everything that will create/change.
 3. terraform apply - applying the changes, and deploying it. 
