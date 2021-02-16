@@ -46,6 +46,12 @@ Deploys those components:
 * Creates new node-group and add it to the cluster
 * Configure kubernetes provider and deploy registry deployment and NodePort service.
 
+In order to start working with the cluster, you must run that command:
+```
+aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
+```
+It creates a new kubeconfig in ~/.kube/config which allows us to contact with the cluster.
+
 ## Built With
 * Terraform - infrastructure as code software
 
